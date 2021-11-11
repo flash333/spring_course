@@ -1,0 +1,9 @@
+# IntelliJ IDEA
+**/.idea/
+*.iml
+
+# Generated source
+**/target
+
+# JPA Buddy
+.jpb/

@@ -7,14 +7,49 @@
     <groupId>org.spring.hoa</groupId>
     <artifactId>spring_course</artifactId>
     <version>1.0-SNAPSHOT</version>
-    <modules>
-        <module>annotation</module>
-    </modules>
     <packaging>pom</packaging>
 
     <properties>
         <maven.compiler.source>16</maven.compiler.source>
         <maven.compiler.target>16</maven.compiler.target>
+        <spring-data-jdbc.version>2.2.4</spring-data-jdbc.version>
+        <spring-context.version>5.3.12</spring-context.version>
+        <spring-aspects.version>5.3.12</spring-aspects.version>
+        <lombok.version>1.18.22</lombok.version>
+        <assertj-core.version>3.21.0</assertj-core.version>
     </properties>
+
+    <dependencies>
+        <dependency>
+            <groupId>org.springframework.data</groupId>
+            <artifactId>spring-data-jdbc</artifactId>
+            <version>${spring-data-jdbc.version}</version>
+        </dependency>
+        <dependency>
+            <groupId>org.springframework</groupId>
+            <artifactId>spring-context</artifactId>
+            <version>${spring-context.version}</version>
+        </dependency>
+        <dependency>
+            <groupId>org.springframework</groupId>
+            <artifactId>spring-aspects</artifactId>
+            <version>${spring-aspects.version}</version>
+        </dependency>
+        <dependency>
+            <groupId>org.projectlombok</groupId>
+            <artifactId>lombok</artifactId>
+            <version>${lombok.version}</version>
+        </dependency>
+        <dependency>
+            <groupId>org.assertj</groupId>
+            <artifactId>assertj-core</artifactId>
+            <version>${assertj-core.version}</version>
+        </dependency>
+    </dependencies>
+
+    <modules>
+        <module>annotation</module>
+        <module>hibernate_validator</module>
+    </modules>
 
 </project>
