@@ -10,10 +10,39 @@
     <modelVersion>4.0.0</modelVersion>
 
     <artifactId>hibernate_validator</artifactId>
+    <dependencies>
+        <dependency>
+            <groupId>org.hibernate</groupId>
+            <artifactId>hibernate-validator</artifactId>
+            <version>${hibernate-validator.version}</version>
+        </dependency>
+        <dependency>
+            <groupId>org.glassfish</groupId>
+            <artifactId>jakarta.el</artifactId>
+            <version>${jakarta.el.version}</version>
+        </dependency>
+        <dependency>
+            <groupId>org.junit.jupiter</groupId>
+            <artifactId>junit-jupiter-api</artifactId>
+            <version>${junit-jupiter-api.version}</version>
+        </dependency>
+        <dependency>
+            <groupId>org.assertj</groupId>
+            <artifactId>assertj-core</artifactId>
+            <version>3.21.0</version>
+        </dependency>
+
+
+    </dependencies>
 
     <properties>
         <maven.compiler.source>16</maven.compiler.source>
         <maven.compiler.target>16</maven.compiler.target>
+        <hibernate-validator.version>7.0.1.Final</hibernate-validator.version>
+        <jakarta.el.version>4.0.1</jakarta.el.version>
+        <junit-jupiter-api.version>5.8.1</junit-jupiter-api.version>
     </properties>
+
+
 
 </project>
