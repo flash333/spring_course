@@ -11,5 +11,8 @@
         <module name="hibernate_validator" />
       </profile>
     </annotationProcessing>
+    <bytecodeTargetLevel>
+      <module name="annotation1" target="16" />
+    </bytecodeTargetLevel>
   </component>
 </project>

@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<project xmlns="http://maven.apache.org/POM/4.0.0"
-         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+<project xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xmlns="http://maven.apache.org/POM/4.0.0"
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
     <modelVersion>4.0.0</modelVersion>
 
@@ -12,11 +12,11 @@
     <properties>
         <maven.compiler.source>16</maven.compiler.source>
         <maven.compiler.target>16</maven.compiler.target>
-        <spring-data-jdbc.version>2.2.4</spring-data-jdbc.version>
-        <spring-context.version>5.3.12</spring-context.version>
-        <spring-aspects.version>5.3.12</spring-aspects.version>
-        <lombok.version>1.18.22</lombok.version>
-        <assertj-core.version>3.21.0</assertj-core.version>
+        <spring-data-jdbc.version>2.2.2</spring-data-jdbc.version>
+        <spring-context.version>5.3.9</spring-context.version>
+        <spring-aspects.version>5.3.9</spring-aspects.version>
+        <lombok.version>1.18.20</lombok.version>
+        <assertj-core.version>3.20.2</assertj-core.version>
     </properties>
 
     <dependencies>
@@ -24,11 +24,27 @@
             <groupId>org.springframework.data</groupId>
             <artifactId>spring-data-jdbc</artifactId>
             <version>${spring-data-jdbc.version}</version>
+            <exclusions>
+                <exclusion>
+                    <artifactId>spring-context</artifactId>
+                    <groupId>org.springframework</groupId>
+                </exclusion>
+            </exclusions>
         </dependency>
         <dependency>
             <groupId>org.springframework</groupId>
             <artifactId>spring-context</artifactId>
             <version>${spring-context.version}</version>
+            <exclusions>
+                <exclusion>
+                    <artifactId>spring-beans</artifactId>
+                    <groupId>org.springframework</groupId>
+                </exclusion>
+                <exclusion>
+                    <artifactId>spring-core</artifactId>
+                    <groupId>org.springframework</groupId>
+                </exclusion>
+            </exclusions>
         </dependency>
         <dependency>
             <groupId>org.springframework</groupId>

@@ -7,7 +7,7 @@ import java.lang.annotation.Target;
 import java.lang.reflect.Field;
 import java.time.Month;
 
-import static org.spring.hoa.Application.FieldInformation.*;
+import static org.spring.hoa.Application.FieldInformation.CreationDate;
 
 public class Application {
     @FieldInformation(
@@ -15,7 +15,7 @@ public class Application {
             createdBy = "Hoa Tran",
             documentation = "Available Java versions",
             version = 2)
-    private Integer numberOfJavaVersions = null;
+    private final Integer numberOfJavaVersions = null;
 
     public static void main(String[] args) throws NoSuchFieldException {
         Application application = new Application();
