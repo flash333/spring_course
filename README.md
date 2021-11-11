@@ -1,1 +1,1 @@
-# spring_course
+# spring course solutions
