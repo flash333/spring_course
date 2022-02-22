@@ -1,0 +1,27 @@
+spring:
+  datasource:
+    username: postgres
+    password: admin
+    driver-class-name: org.postgresql.Driver
+    liquibase:
+      change-log: classpath:/db/changelog/db.changelog-master.xml
+    url: jdbc:postgresql://localhost:5434/postgres
+    hikari:
+      schema: clinic
+  jpa:
+    show-sql: true
+    properties:
+      hibernate:
+        format_sql: true
+    generate-ddl: true
+    hibernate:
+      ddl-auto: create-drop
+    open-in-view: false
+  main:
+    banner-mode: off
+server:
+  servlet:
+    context-path: /clinic
+application:
+  version: '@project.version@'
+  name: '@project.artifactId@'
